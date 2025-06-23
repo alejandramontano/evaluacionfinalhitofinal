@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color:#f6f5f7;
+    width: 100%;
+ }
+/* NAVEGACION */
+.conteiner{
+   max-width: 1200px;
+  margin: 0 auto;
+}
+.header{
+   background-color:  #663854;
+   display: flex;
+   align-items: center;
+   height: 70px;
+   padding: 5px 10px;
+}
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.menu .menu-lista ul li{
+  position: relative;
+  float: left;
+}
+.menu-lista ul li a{
+  font-size: 17px;
+  padding: 20px;
+  color: azure;
+  text-decoration: none;
+  display: block;
+}
+.menu-lista ul li a:before{
+  position: absolute;
+  top: 50px;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #f4f4f4;
+  transform: scale(0);
+  transform-origin: right;
+  transition: transform.4s linear;
+}
+.menu-lista ul li a:hover:before{
+  transform: scale(1);
+  transform-origin: left;
+}
+#menu{
+  display: none;
+}
+.menuicono{
+  font-size: 20px;
+  width: 25px;
+  color: azure;
+}
+.menu label{
+  cursor: pointer;
+  display: none;
+}
+@media (max-width:991px){
+  .menu{
+    padding: 30px;
+    margin: 0;
+    
+  }
+  .menu label{
+    display: initial;
+  }
+  .menu .menu-lista{
+    position: absolute;
+    top:80%;
+    left: 0;
+    right: 0;
+    background-color: #663854;
+    display: none;
+    text-align: center;
+  }
+.menu .menu-lista ul li{
+  width: 100%;
+}
+#menu:checked~.menu-lista{
+  display: initial;
+
+}
+}
+/*bootstrap*/
+.fondoimgdos{background-image:linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)),
+        url(EXTRA/FEXCO-FOTO-1.jpeg);
+        background-position:center bottom; 
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 90vh ;
+        display: flex;
+        align-items: center;
+        background-attachment: fixed;
+}
+.fondoimgdos-texto{
+       color: aliceblue;
+       font-size: 60px;
+       text-align: center;
+       padding: 200px;
+       margin: 30px;
+       font-family: "Archivo Black", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+}
+@media (min-width: 0px) and (max-width: 625px) {
+    .fondoimgdos {
+        background-attachment: scroll;
+        padding: 20px;
+    }
+.fondoimgdos-texto {
+        font-size: 40px;
+        padding: 60px 20px;
+        margin: 30px;
+    }
+  }
+@media (min-width: 626px) and (max-width: 1024px) {
+    .fondoimgdos-texto {
+        padding: 100px 40px;
+        margin: 20px;
+    }
+}
+
+/* SEGUNDA PARTE DE CONTENIDO */
+.informacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 40px;
+  padding: 40px;
+}
+
+.informacion-texto--titulo{
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #361529;
+}
+
+.informacion-texto--parrafo {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.informacion-imagen--fexco{
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .informacion {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .informacion-texto--titulo{
+    font-size: 28px;
+  }
+
+  .informacion-texto-parrafo{
+    font-size: 15px;
+  }
+
+  .informacion-imagen--fexco{
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+/* Tercera Parte */
+.article{
+  background-color: #dddddd;
+  padding: 50px;
+}
+.article-texto{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 60px;
+  color: #361529;
+}
+.article-nav{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+margin-top: 60px;
+}
+.article-nav1{
+  width: 325px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.6s ease ;
+}
+.article-nav1:hover{
+  transform: translateY(-20px);
+}
+.article-nav1--img img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.article-nav1--texto{
+  padding: 40px;
+}
+.article-nav1--texto__titulo{
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #361529;
+}
+.article-nav1--texto__parrafo{
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.article-nav1--texto__boton{
+  display: inline-block;
+  background: #663854;
+  color: #f6f5f7;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 8px 6px;
+  transition: background-color 400ms;
+}
+.article-nav1--texto__boton:hover{
+    background-color:#b8769d;
+    color: #663854;
+}
+/* PIE DE PAGINA */
+.footer{
+  background-color: #663854;
+  padding-top: 50px;
+}
+.footer-contenido{
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-contenido--principal{
+  width: 33.3%;
+}
+.footer-contenido--principal h4{
+  color: #f6f5f7;
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.footer-contenido--principal p{
+  color: #f6f5f7;
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+  font-size: 15px;
+}
+.footer-contenido--principal__redes{
+  text-align: center;
+}
+.footer-contenido--principal i{
+  text-align: center;
+  font-size: 30px;
+  color: #f6f5f7;
+  padding: 15px;
+  position: relative;
+  transition: transform 0.6s ease ;
+}
+.footer-contenido--principal i:hover{
+  transform: translateY(-20px);
+  color:#81486a;
+  background-color: #dddddd;
+  border-radius: 1000%;
+}
+.footer-secundario{
+  margin-top: 20px;
+  background-color: #b87a9e;
+  padding: 10px;
+}
+.footer-secundario p{
+  color:#f6f5f7 ;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .footer-contenido {
+    width: 90%;
+    display: flex;
+    flex-direction:row;
+    
+  }
+
+  .footer-contenido--principal {
+    width: 100%;
+    margin: 10px;
+    font-size: 16px;
+    
+  }
+
+  .footer-contenido--principal p {
+    width: 100%;
+    
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .footer-contenido--principal h4 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .footer-contenido {
+    width: 90%;
+    display: flex;
+    flex-direction:column;
+    
+  }
+
+  .footer-contenido--principal p {
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .footer-contenido--principal a {
+    font-size: 26px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .footer-secundario p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+
+
+
+
